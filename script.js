@@ -6,9 +6,9 @@ document.querySelector('form').addEventListener('submit', function (event) {
 
     fetch(`https://overfast-api.tekrop.fr/players/${gamertag}/summary`, {
         method: 'GET',
+        mode: 'cors',
         headers: {
             'Content-Type': 'application/json',
-            // 'Authorization': 'Bearer YOUR_TOKEN' // if the API requires an Authorization token
         }
     })
         .then(response => response.json())
