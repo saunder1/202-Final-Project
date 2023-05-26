@@ -59,6 +59,7 @@
     top: 0;
     left: 0;
     z-index: 1;
+    background: linear-gradient(to bottom, white, black);
 }
 
 #learn-content {
@@ -68,4 +69,63 @@
 .filler {
     height: 100vh;
 }
+
+#goty, #owl, #heroes {
+    position: relative;
+    background-color: black;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#heroes-text {
+    width: 40%;
+    position: absolute;
+    left: -40%;
+    color: white;
+    font-size: 50px;
+}
+
+/* #genji {
+    position: absolute;
+    z-index: 10;
+} */
+
+#trophy {
+    position: absolute;
+    height: 80%;
+    width: auto;
+    left: -20%;
+}
+
+#goty-text {
+    position: absolute;
+    right: -40%;
+    color: white;
+    font-size: 50px;
+    width: 40%;
+}
+
+#owl-text {
+    position: absolute;
+    left: -40%;
+    color: white;
+    font-size: 50px;
+    width: 40%;
+    z-index: 10;
+}
+
+#owl-logo {
+    position: absolute;
+    height: 80%;
+    width: auto;
+    right: -30%;
+    z-index: 2;
+}
+
+
+
 
