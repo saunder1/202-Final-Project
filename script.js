@@ -16,14 +16,38 @@ ScrollTrigger.create({
     pin: "#learn"
 })
 
+// bring heroes text in from the left side
+gsap.to("#heroes-text", {
+    x: "60vw",
+    duration: 3,
+    scrollTrigger: {
+        trigger: "#heroes",
+        start: "top 80%",
+        end: "top 30%",
+        scrub: true
+    }
+})
+
+// bring genji in from the right side
+gsap.to("#genji", {
+    x: "-33vw",
+    duration: 3,
+    scrollTrigger: {
+        trigger: "#heroes",
+        start: "top 80%",
+        end: "top 30%",
+        scrub: true
+    }
+})
+
 // bring in trophy image from the left side 
 gsap.to("#trophy", {
     x: "210%",
     duration: 3,
     scrollTrigger: {
         trigger: "#goty",
-        start: "top 95%",
-        end: "top 5%",
+        start: "top 80%",
+        end: "top 30%",
         scrub: true
     }
 })
@@ -34,8 +58,8 @@ gsap.to("#goty-text", {
     duration: 3,
     scrollTrigger: {
         trigger: "#goty",
-        start: "top 95%",
-        end: "top 5%",
+        start: "top 80%",
+        end: "top 30%",
         scrub: true
     }
 })
@@ -46,8 +70,8 @@ gsap.to("#owl-text", {
     duration: 3,
     scrollTrigger: {
         trigger: "#owl",
-        start: "top 95%",
-        end: "top 5%",
+        start: "top 80%",
+        end: "top 30%",
         scrub: true
     }
 })
@@ -58,30 +82,8 @@ gsap.to("#owl-logo", {
     duration: 3,
     scrollTrigger: {
         trigger: "#owl",
-        start: "top 95%",
-        end: "top 5%",
+        start: "top 80%",
+        end: "top 30%",
         scrub: true
     }
 })
-
-// gsap.to("#heroes-text", {
-//     x: "230%",
-//     duration: 3,
-//     scrollTrigger: {
-//         trigger: "#heroes",
-//         start: "top 95%",
-//         end: "top 5%",
-//         scrub: true
-//     }
-// })
-
-// gsap.to("#genji", {
-//     x: "-230%",
-//     duration: 3,
-//     scrollTrigger: {
-//         trigger: "#heroes",
-//         start: "top 95%",
-//         end: "top 5%",
-//         scrub: true
-//     }
-// })

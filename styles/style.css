@@ -6,15 +6,6 @@
 * {
     margin: 0;
     padding: 0;
-    text-align: center;
-}
-
-#header {
-    position: relative;
-    height: 200vh;
-    width: 100%;
-    overflow: hidden;
-    background-color: white;
 }
 
 #title {
@@ -22,28 +13,17 @@
     justify-content: center;
     font-family: dugas;
     font-size: 30vw;
-    position: absolute;
+    position: relative;
     height: 200vh;
     width: 100%;
     z-index: 2;
     background-color: white;
-}
-
-#over {
-    height: 100vh;
-}
-
-#over-content {
-    line-height: 100vh;
-}
-
-#watch {
-    height: 200vh;
-    text-align: left;
+    overflow: hidden;
     line-height: 100vh;
 }
 
 #learn {
+    text-align: center;
     height: 100vh;
     width: 100%;
     display: grid;
@@ -71,6 +51,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
+    text-align: center;
 }
 
 #goty, #owl, #heroes {
@@ -87,20 +68,21 @@
 #heroes-text {
     width: 40%;
     position: absolute;
-    left: -40%;
+    left: -40vw;
     color: white;
     font-size: 50px;
+    z-index: 2;
 }
 
-/* #genji {
+#genji {
     position: absolute;
-    z-index: 10;
-} */
+    height: 80%;
+    right: -20vw;
+}
 
 #trophy {
     position: absolute;
     height: 80%;
-    width: auto;
     left: -20%;
 }
 
@@ -124,7 +106,6 @@
 #owl-logo {
     position: absolute;
     height: 80%;
-    width: auto;
     right: -30%;
     z-index: 2;
 }
