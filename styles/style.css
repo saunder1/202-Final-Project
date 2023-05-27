@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&display=swap');
+
 @font-face {
     font-family: dugas;
     src: url(./DugasPro/ttf/DugasPro-BlackUltra-condensed.ttf)
@@ -6,6 +8,10 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+main {
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 #title {
@@ -108,6 +114,26 @@
     height: 80%;
     right: -30%;
     z-index: 2;
+}
+
+.text-contain {
+    width: 50%;
+}
+
+#ow2-announcement {
+    height: 100vh;
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+    position: absolute;
+}
+
+#ow2-announced {
+    opacity: 0;
+    color: white;
 }
 
 

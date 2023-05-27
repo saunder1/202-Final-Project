@@ -66,24 +66,37 @@ gsap.to("#goty-text", {
 
 // bring in owl-text from the left side
 gsap.to("#owl-text", {
-    x: "230%",
+    x: "150%",
     duration: 3,
     scrollTrigger: {
         trigger: "#owl",
         start: "top 80%",
-        end: "top 30%",
+        end: "top 50%",
         scrub: true
     }
 })
 
 // bring in owl logo from the right side
 gsap.to("#owl-logo", {
-    x: "-230%",
+    x: "-150%",
     duration: 3,
     scrollTrigger: {
         trigger: "#owl",
         start: "top 80%",
-        end: "top 30%",
+        end: "top 50%",
+        scrub: true
+    }
+})
+
+gsap.to("#ow2-announced", {
+    opacity: 1,
+    scale: 1.5,
+    ease: 'none',
+    duration: 3,
+    scrollTrigger: {
+        trigger: "#ow2-announcement",
+        start: "top 50%",
+        end: "top top",
         scrub: true
     }
 })
