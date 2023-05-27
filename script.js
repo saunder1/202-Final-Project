@@ -21,7 +21,7 @@ gsap.to("#heroes-text", {
     x: "60vw",
     duration: 3,
     scrollTrigger: {
-        trigger: "#heroes",
+        trigger: ".side1",
         start: "top 80%",
         end: "top 30%",
         scrub: true
@@ -33,7 +33,7 @@ gsap.to("#genji", {
     x: "-33vw",
     duration: 3,
     scrollTrigger: {
-        trigger: "#heroes",
+        trigger: ".side1",
         start: "top 80%",
         end: "top 30%",
         scrub: true
@@ -45,7 +45,7 @@ gsap.to("#trophy", {
     x: "210%",
     duration: 3,
     scrollTrigger: {
-        trigger: "#goty",
+        trigger: ".side2",
         start: "top 80%",
         end: "top 30%",
         scrub: true
@@ -57,7 +57,7 @@ gsap.to("#goty-text", {
     x: "-160%",
     duration: 3,
     scrollTrigger: {
-        trigger: "#goty",
+        trigger: ".side2",
         start: "top 80%",
         end: "top 30%",
         scrub: true
@@ -69,7 +69,7 @@ gsap.to("#owl-text", {
     x: "150%",
     duration: 3,
     scrollTrigger: {
-        trigger: "#owl",
+        trigger: ".side3",
         start: "top 80%",
         end: "top 50%",
         scrub: true
@@ -81,7 +81,7 @@ gsap.to("#owl-logo", {
     x: "-150%",
     duration: 3,
     scrollTrigger: {
-        trigger: "#owl",
+        trigger: ".side3",
         start: "top 80%",
         end: "top 50%",
         scrub: true
@@ -100,3 +100,48 @@ gsap.to("#ow2-announced", {
         scrub: true
     }
 })
+
+gsap.fromTo('#pve', 
+    // from
+    { x: "+=150%" }, 
+    // to
+    { x: "0%", 
+    duration: 3,
+    ease: 'none',
+    scrollTrigger: {
+        trigger: "#pve",
+        start: "top 80%",
+        end: "top 20%",
+        scrub: true
+    } 
+});
+
+gsap.fromTo('#missions', 
+    // from
+    { x: "-=150%" }, 
+    // to
+    { x: "0%", 
+    duration: 3,
+    ease: 'none',
+    scrollTrigger: {
+        trigger: "#pve",
+        start: "top 80%",
+        end: "top 20%",
+        scrub: true
+    } 
+});
+
+gsap.fromTo('#new-stuff', 
+    // from
+    { x: "+=150%" }, 
+    // to
+    { x: "0%", 
+      duration: 3,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: "#pve",
+        start: "top 80%",
+        end: "top 20%",
+        scrub: true
+    } 
+});
