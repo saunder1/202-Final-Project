@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=Ubuntu&display=swap');
 
 @font-face {
     font-family: dugas;
@@ -34,7 +34,7 @@ main {
     width: 100%;
     display: grid;
     place-items: center;
-    font-size: 50px;
+    font-size: 75px;
     position: absolute;
     top: 0;
     left: 0;
@@ -71,6 +71,7 @@ main {
     padding-right: 20%;
     color: white;
     font-size: 50px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #heroes-text {
@@ -117,7 +118,7 @@ main {
 }
 
 #ow2-announcement {
-    height: 100vh;
+    height: 50vh;
     background-color: black;
     text-align: center;
     width: 100%;
@@ -125,6 +126,7 @@ main {
     place-items: center;
     font-size: 40px;
     position: absolute;
+    z-index: 10;
 }
 
 #ow2-announced {
@@ -132,42 +134,34 @@ main {
     color: white;
 }
 
-.side-reveal-promises {
-    overflow-x: hidden;
-    width: 100%;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
+.promises {
+    color: white;
+    font-size: 50px;
+    background-color: black;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    font-size: 50px;
-    background-color: black;
-    color: white;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.promises-1, .promises-2 {
-    position: relative;
-    background-color: black;
-    height: 33%;
-    vertical-align: middle;
-    /* display: flex;
-    align-items: center; */
-    padding-left: 20%;
-    padding-right: 20%;
-    color: white;
-    font-size: 50px;
-}
-
-.promises-1 {
-    text-align: left;
-}
-
-.promises-2 {
-    text-align: right;
-}
-
-#pve, #missions, #new-stuff {
-    display: inline-block;
+.promises p {
     width: 70%;
+}
+
+.pve {
+    background-color: #252525;
+}
+
+.missions {
+    background-color: #AAAAAA;
+    color: black;
+}
+
+.new-stuff {
+    background-color: white;
+    color: black;
 }
 
 
