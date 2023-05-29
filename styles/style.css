@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Monomaniac+One&family=Oswald&display=swap');
 
 @font-face {
     font-family: dugas;
@@ -78,7 +78,7 @@ main {
     padding-right: 20%;
     color: white;
     font-size: 50px;
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 #heroes-text {
@@ -150,8 +150,7 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-family: 'Helvetica', sans-serif;
-    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
 }
 
 .promises p {
@@ -244,6 +243,7 @@ main {
     background-color: black;
     display: flex;
     flex-direction: column;
+    font-family: 'Oswald', sans-serif;
 }
 
 .launch {
