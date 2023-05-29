@@ -88,6 +88,7 @@ gsap.to("#owl-logo", {
     }
 })
 
+// scale up and fade in announcement
 gsap.to("#ow2-announced", {
     opacity: 1,
     scale: 1.5,
@@ -101,6 +102,7 @@ gsap.to("#ow2-announced", {
     }
 })
 
+// pin announcement while promises scroll up and layer
 ScrollTrigger.create({
     trigger: "#ow2-announcement",
     start: "top top",
@@ -133,85 +135,94 @@ ScrollTrigger.create({
     pinSpacing: false 
 });
 
-// ScrollTrigger.create({
-//     trigger: ".pve",
-//     start: "top 50%",
-//     endTrigger: ".new-stuff",
-//     end: "bottom bottom",
-//     pin: ".pve"
-// })
+// horizontal scrolling of "devs go quiet..." section
+let sections = gsap.utils.toArray(".panel");
 
-// ScrollTrigger.create({
-//     trigger: ""
-// })
-
-
-// // we'll create a ScrollTrigger for each panel just to track when each panel's top hits the top of the viewport (we only need this for snapping)
-// let tops = panels.map(panel => ScrollTrigger.create({trigger: panel, start: "top top"}));
-
-let panels = gsap.utils.toArray(".promises");
-
-panels.forEach((panel, i) => {
-  
+gsap.to(sections, {
+    xPercent: -100 * (sections.length - 1),
+    ease: "none",
+    scrollTrigger: {
+        trigger: "#dead",
+        pin: true,
+        scrub: 1,
+        snap: 1 / (sections.length - 1),
+        end: "+=3500",
+    }
 });
 
-// ScrollTrigger.create({
-//     scrub: true,
-//   snap: {
-//     snapTo: (progress, self) => {
-//       let panelStarts = tops.map(st => st.start), // an Array of all the starting scroll positions. We do this on each scroll to make sure it's totally responsive. Starting positions may change when the user resizes the viewport
-//           snapScroll = gsap.utils.snap(panelStarts, self.scroll()); // find the closest one
-//       return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll); // snapping requires a progress value, so convert the scroll position into a normalized progress value between 0 and 1
-//     },
-//     duration: 0.5
-//   }
-// });
-
+// hold overwatch 2 release in place 
+ScrollTrigger.create({
+    trigger: "#dead-container",
+    start: "top top",
+    end: "bottom top",
+    pin: "#ow2-released",
+})
 
 
 // staggered <p> in from sides
 
-// gsap.fromTo('#pve', 
-//     // from
-//     { x: "+=150%" }, 
-//     // to
-//     { x: "0%", 
-//     duration: 3,
-//     ease: 'none',
-//     scrollTrigger: {
-//         trigger: "#pve",
-//         start: "top 80%",
-//         end: "top 20%",
-//         scrub: true
-//     } 
-// });
+gsap.fromTo('#A', 
+    // from
+    { x: "+=150%" }, 
+    // to
+    { x: "0%", 
+    ease: 'none',
+    scrollTrigger: {
+        trigger: "#A",
+        end: "bottom 95%",
+        scrub: true
+    } 
+});
 
-// gsap.fromTo('#missions', 
-//     // from
-//     { x: "-=150%" }, 
-//     // to
-//     { x: "0%", 
-//     duration: 3,
-//     ease: 'none',
-//     scrollTrigger: {
-//         trigger: "#pve",
-//         start: "top 80%",
-//         end: "top 20%",
-//         scrub: true
-//     } 
-// });
+gsap.fromTo('#B', 
+    // from
+    { x: "-=150%" }, 
+    // to
+    { x: "0%", 
+    ease: 'none',
+    scrollTrigger: {
+        trigger: "#B",
+        end: "bottom 95%",
+        scrub: true
+    } 
+});
 
-// gsap.fromTo('#new-stuff', 
-//     // from
-//     { x: "+=150%" }, 
-//     // to
-//     { x: "0%", 
-//       duration: 3,
-//       ease: 'none',
-//       scrollTrigger: {
-//         trigger: "#pve",
-//         start: "top 80%",
-//         end: "top 20%",
-//         scrub: true
-//     } 
-// });
+
+gsap.fromTo('#C', 
+    // from
+    { x: "+=150%" }, 
+    // to
+    { x: "0%", 
+    ease: 'none',
+    scrollTrigger: {
+        trigger: "#C",
+        end: "bottom 95%",
+        scrub: true
+    } 
+});
+
+gsap.fromTo('#D', 
+    // from
+    { x: "-=150%" }, 
+    // to
+    { x: "0%", 
+    ease: 'none',
+    scrollTrigger: {
+        trigger: "#D",
+        end: "bottom 95%",
+        scrub: true
+    } 
+});
+
+// Create the timeline
+let tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".wait",
+        start: "top top",
+        end: "+=200%",
+        scrub: true,
+        pin: true
+    }
+})
+.fromTo("#wait-content", {opacity: 0}, {opacity: 1})
+.to("#wait-content", {opacity: 0});
