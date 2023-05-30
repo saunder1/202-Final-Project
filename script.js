@@ -222,12 +222,32 @@ let tl = gsap.timeline({
 .to("#wait-content", {opacity: 0});
 
 gsap.from("#zoom-out p", {
-    scale: 100, stager: 0.25, duration: 3,
+    scale: 100,
+    opacity: 0,
+    duration: 3,
     scrollTrigger: {
         trigger: "#zoom-out",
         start: "top top",
         end: "+=200%",
-        pin: true,
-        scrub: 3
+        scrub: 1
     }
 })
+
+ScrollTrigger.create({
+    trigger: "#zoom-out",
+    start: "top top",
+    end: "+=225%",
+    pin: true,
+})
+
+gsap.to("#zoom-in p", {
+    scale: 4,
+    duration: 3,
+    scrollTrigger: {
+        trigger: "#zoom-in",
+        start: "top center",
+        end: "bottom bottom",
+        scrub: 1
+    }
+})
+
