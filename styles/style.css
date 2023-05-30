@@ -261,6 +261,11 @@ main {
     text-align: right;
 }
 
+#broken-container {
+    position: relative;
+    overflow: hidden;
+}
+
 .wait {
     text-align: center;
     display: grid;
@@ -268,7 +273,30 @@ main {
     font-size: 7em;
     background-color: black;
     color: white;
+    height: 100vh;
+    width: 100%;
 }
 
+#no-overflow {
+    overflow: hidden;
+    width: 100%;
+    background-color: black;
+}
 
+#zoom-out {
+    height: 100vh;
+    color: white;
+    font-size: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+    background-color: black;
+}
+
+#broken {
+    width: 70%;
+    text-align: center
+}
 

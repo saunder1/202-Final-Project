@@ -24,7 +24,7 @@ gsap.to("#heroes-text", {
         trigger: ".side1",
         start: "top 80%",
         end: "top 30%",
-        scrub: true
+        scrub: 1
     }
 })
 
@@ -36,7 +36,7 @@ gsap.to("#genji", {
         trigger: ".side1",
         start: "top 80%",
         end: "top 30%",
-        scrub: true
+        scrub: 1
     }
 })
 
@@ -48,7 +48,7 @@ gsap.to("#trophy", {
         trigger: ".side2",
         start: "top 80%",
         end: "top 30%",
-        scrub: true
+        scrub: 1
     }
 })
 
@@ -60,7 +60,7 @@ gsap.to("#goty-text", {
         trigger: ".side2",
         start: "top 80%",
         end: "top 30%",
-        scrub: true
+        scrub: 1
     }
 })
 
@@ -72,7 +72,7 @@ gsap.to("#owl-text", {
         trigger: ".side3",
         start: "top 80%",
         end: "top 50%",
-        scrub: true
+        scrub: 1
     }
 })
 
@@ -84,7 +84,7 @@ gsap.to("#owl-logo", {
         trigger: ".side3",
         start: "top 80%",
         end: "top 50%",
-        scrub: true
+        scrub: 1
     }
 })
 
@@ -98,7 +98,7 @@ gsap.to("#ow2-announced", {
         trigger: "#ow2-announcement",
         start: "top 50%",
         end: "top 20%",
-        scrub: true
+        scrub: 1
     }
 })
 
@@ -114,7 +114,7 @@ ScrollTrigger.create({
 ScrollTrigger.create({
     trigger: ".pve",
     start: "top 50%",
-    pin: true, 
+    pin: true,
     pinSpacing: false 
 });
 
@@ -170,47 +170,41 @@ gsap.fromTo('#A',
     scrollTrigger: {
         trigger: "#A",
         end: "bottom 95%",
-        scrub: true
+        scrub: 1
     } 
 });
 
 gsap.fromTo('#B', 
-    // from
     { x: "-=150%" }, 
-    // to
     { x: "0%", 
     ease: 'none',
     scrollTrigger: {
         trigger: "#B",
         end: "bottom 95%",
-        scrub: true
+        scrub: 1
     } 
 });
 
 
 gsap.fromTo('#C', 
-    // from
     { x: "+=150%" }, 
-    // to
     { x: "0%", 
     ease: 'none',
     scrollTrigger: {
         trigger: "#C",
         end: "bottom 95%",
-        scrub: true
+        scrub: 1
     } 
 });
 
 gsap.fromTo('#D', 
-    // from
     { x: "-=150%" }, 
-    // to
     { x: "0%", 
     ease: 'none',
     scrollTrigger: {
         trigger: "#D",
         end: "bottom 95%",
-        scrub: true
+        scrub: 1
     } 
 });
 
@@ -220,9 +214,20 @@ let tl = gsap.timeline({
         trigger: ".wait",
         start: "top top",
         end: "+=200%",
-        scrub: true,
+        scrub: 1,
         pin: true
     }
 })
 .fromTo("#wait-content", {opacity: 0}, {opacity: 1})
 .to("#wait-content", {opacity: 0});
+
+gsap.from("#zoom-out p", {
+    scale: 100, stager: 0.25, duration: 3,
+    scrollTrigger: {
+        trigger: "#zoom-out",
+        start: "top top",
+        end: "+=200%",
+        pin: true,
+        scrub: 3
+    }
+})
